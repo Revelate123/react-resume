@@ -2,6 +2,7 @@ import {StaticImageData} from 'next/image';
 import {FC, ForwardRefExoticComponent, SVGProps} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
+import { IconType } from 'react-icons';
 
 export interface HomepageMeta {
   title: string;
@@ -25,7 +26,19 @@ export interface Hero {
   name: string;
   description: JSX.Element;
   actions: HeroActionItem[];
+  resumeDownload: HeroActionItem2[];
+ 
 }
+
+
+
+interface HeroActionItem2 {
+  cv: string;
+  text: string;
+  primary?: boolean;
+  Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
+}
+
 
 interface HeroActionItem {
   href: string;
@@ -63,14 +76,14 @@ export interface Stat {
  */
 
 export interface Skill {
-  name: string;
-  level: number;
-  max?: number;
+  skillData: SkillGroup[];
 }
 
-export interface SkillGroup {
+
+interface SkillGroup {
   name: string;
-  skills: Skill[];
+  svg?: string;
+  icon: IconType;
 }
 
 /**

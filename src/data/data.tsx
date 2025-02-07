@@ -1,23 +1,21 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
+  
 } from '@heroicons/react/24/outline';
+
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.png';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -27,18 +25,28 @@ import {
   Hero,
   HomepageMeta,
   PortfolioItem,
-  SkillGroup,
+  Skill,
+
   Social,
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
+import {RiReactjsLine} from "react-icons/ri";
+import { FaPython,FaAws,FaGitAlt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiPostgresql } from "react-icons/si";
+import { FcLinux } from "react-icons/fc";
+import { FaDocker } from "react-icons/fa6";
+import { SiMongodb } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Thomas Duffett',
+  description: "A showcase of Thomas Duffett's skills and experience",
 };
 
 /**
@@ -66,44 +74,44 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm currently following my passions studying a  <strong className="text-stone-100">Master of IT</strong> full time at <strong className="text-stone-100">UNSW. </strong> 
-        I love reading, learning, and building things.
+        I'm based in <strong className="text-stone-100">Sydney</strong> and currently studying a  <strong className="text-stone-100">Master's</strong> of <strong className="text-stone-100">Information Technology</strong> at The University of New South Wales, <strong className="text-stone-100">UNSW</strong>.
+        
       </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Rowing</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
-      </p>
+      
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
+   
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
       primary: false,
     },
   ],
+  resumeDownload: [
+    {
+      cv: '/static/Thomas Duffett CV Software Engineer.pdf',
+      text: 'View resume',
+      primary: true,
+      Icon: ArrowDownTrayIcon,
+    },
+  ],
+  
+  
 };
+
 
 /**
  * About section
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I'm a structural engineer studying computer science. After working in construction, I realized I enjoyed programming more and decided to pursue it full-time. I’m currently earning a master’s in IT, building my skills in software development.`,
   aboutItems: [
-    {label: 'Location', text: 'Sydney', Icon: MapIcon},
+    {label: 'Location', text: 'Sydney, NSW, Australia', Icon: MapIcon},
     {label: 'Age', text: '26', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Kiwi', Icon: FlagIcon},
-    {label: 'Interests', text: 'Rowing', Icon: SparklesIcon},
+    {label: 'Nationality', text: 'New Zealander', Icon: FlagIcon},
+    {label: 'Interests', text: 'Rowing, Surf Rowing, Reading', Icon: SparklesIcon},
     {label: 'Study', text: 'University of New South Wales', Icon: AcademicCapIcon}
     ,
   ],
@@ -112,76 +120,51 @@ export const aboutData: About = {
 /**
  * Skills section
  */
-export const skills: SkillGroup[] = [
+export const skill: Skill = {
+  skillData: [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
+    name: "React",
+    icon: RiReactjsLine
   },
   {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
+    name: "Python",
+    icon: FaPython
   },
   {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
+    name: "Javascript",
+    icon: IoLogoJavascript
   },
   {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
+    name: "AWS",
+    icon: FaAws
   },
-];
+  {
+    name: "SQL",
+    icon: SiPostgresql
+  },
+  {
+    name: "Linux",
+    icon: FcLinux
+   
+  },
+  {
+    name: "Docker",
+    icon: FaDocker
+  },
+  {
+    name: "MongoDB",
+    icon: SiMongodb
+  },
+  {
+    name: "Git",
+    icon: FaGitAlt
+  },
+  {
+    name: "TailwindCSS",
+    icon: RiTailwindCssFill
+  },
+],
+};
 
 /**
  * Portfolio section
@@ -212,7 +195,7 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'Spetember 2024 - current',
+    date: '2024 - current',
     location: 'University of New South Wales',
     title: 'Master of Information Technology',
     content: <p>Specialising in Cyber Security.</p>,

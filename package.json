@@ -12,8 +12,15 @@
     "sitemap": "yarn next-sitemap"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^1.7.16",
     "@heroicons/react": "^2.0.18",
+    "@react-pdf/renderer": "^4.2.1",
     "@tailwindcss/cli": "^4.0.3",
     "@tailwindcss/vite": "^4.0.3",
     "autoprefixer": "10.4.16",
@@ -21,6 +28,8 @@
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
+    "react-pdf": "^9.2.1",
     "ts-pattern": "^5.0.4",
     "yarn": "^1.22.22"
   },
