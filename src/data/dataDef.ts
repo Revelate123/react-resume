@@ -1,8 +1,8 @@
 import {StaticImageData} from 'next/image';
 import {FC, ForwardRefExoticComponent, SVGProps} from 'react';
+import {IconType} from 'react-icons';
 
 import {IconProps} from '../components/Icon/Icon';
-import { IconType } from 'react-icons';
 
 export interface HomepageMeta {
   title: string;
@@ -84,6 +84,7 @@ interface SkillGroup {
   name: string;
   svg?: string;
   icon: IconType;
+  colour?: string;
 }
 
 /**

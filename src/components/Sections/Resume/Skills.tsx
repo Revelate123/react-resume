@@ -1,16 +1,15 @@
-import React from 'react'
+//import React from 'react'
 import {FC, memo} from 'react';
-import {SectionId} from '../../../data/data';
-import Section from '../../Layout/Section';
 
-import { skill } from '../../../data/data';
+import {SectionId,skill} from '../../../data/data';
+import Section from '../../Layout/Section';
 
 
 
 
 
 const Skills: FC = memo(() => {
-  const { skillData } = skill;
+  const {skillData} = skill;
   return (
     <Section className="bg-neutral-100" sectionId={SectionId.Skills}>
       <div className="grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0  md:grid-cols-4">
@@ -26,7 +25,8 @@ const Skills: FC = memo(() => {
       {skillData.map((props) => (
             <div className="rounded-2xl border-4 border-neutral-800 p-4">
             <div className="flex justify-center">
-            {props.svg?<svg></svg>:<props.icon className="text-7xl text-center"/>}
+            {props.svg?<img className=" h-[4.5rem]" src={props.svg}></img>:<props.icon className={`${props.colour} text-7xl text-center`}/>}
+            
             </div>
             
             <h2 className='text-2xl text-center'>{props.name}</h2>

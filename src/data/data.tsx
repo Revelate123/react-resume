@@ -5,15 +5,19 @@ import {
   FlagIcon,
   MapIcon,
   SparklesIcon,
-  
 } from '@heroicons/react/24/outline';
-
+import {FaAws,FaGitAlt,FaPython} from "react-icons/fa";
+import {FaDocker} from "react-icons/fa6";
+import {FcLinux} from "react-icons/fc";
+import {IoLogoJavascript} from "react-icons/io5";
+import {RiReactjsLine,RiTailwindCssFill} from "react-icons/ri";
+import {SiMongodb,SiPostgresql} from "react-icons/si";
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
-import porfolioImage1 from '../images/portfolio/portfolio-1.png';
+import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import profilepic from '../images/profilepic.jpg';
@@ -26,19 +30,12 @@ import {
   HomepageMeta,
   PortfolioItem,
   Skill,
-
   Social,
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
-import {RiReactjsLine} from "react-icons/ri";
-import { FaPython,FaAws,FaGitAlt } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiPostgresql } from "react-icons/si";
-import { FcLinux } from "react-icons/fc";
-import { FaDocker } from "react-icons/fa6";
-import { SiMongodb } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
+
+
 
 
 /**
@@ -124,22 +121,29 @@ export const skill: Skill = {
   skillData: [
   {
     name: "React",
-    icon: RiReactjsLine
+    icon: RiReactjsLine,
+    colour: "text-cyan-400 "
   },
   {
     name: "Python",
+    svg: "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
     icon: FaPython
   },
+
   {
     name: "Javascript",
-    icon: IoLogoJavascript
+    svg:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png?20141107110902",
+    icon: IoLogoJavascript,
+    colour: "text-[#F0DB4F] bg-black"
   },
   {
     name: "AWS",
+    svg:"//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png",
     icon: FaAws
   },
   {
     name: "SQL",
+    svg:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/810px-Postgresql_elephant.svg.png",
     icon: SiPostgresql
   },
   {
@@ -149,18 +153,23 @@ export const skill: Skill = {
   },
   {
     name: "Docker",
-    icon: FaDocker
+    icon: FaDocker,
+    colour:"text-[#1D63ED]"
   },
   {
     name: "MongoDB",
-    icon: SiMongodb
+    svg:"https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
+    icon: SiMongodb,
+    colour: "text-green-500"
   },
   {
     name: "Git",
+    svg:"https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
     icon: FaGitAlt
   },
   {
     name: "TailwindCSS",
+    svg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042",
     icon: RiTailwindCssFill
   },
 ],
@@ -171,9 +180,9 @@ export const skill: Skill = {
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Flet',
+    title: 'Restaurant Recommender',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '/restaurant',
     image: porfolioImage1,
   },
   {
