@@ -188,7 +188,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Seek 2',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: 'http://localhost:2080',
     image: porfolioImage2,
   },
   {
