@@ -85,6 +85,7 @@ interface SkillGroup {
   svg?: string;
   icon: IconType;
   colour?: string;
+  href: string;
 }
 
 /**

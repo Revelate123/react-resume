@@ -69,8 +69,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        🥝 based in <strong className="text-stone-100">Sydney</strong> studying a  <strong className="text-stone-100">Master's of IT</strong> @ <strong className="text-stone-100">UNSW</strong>.
-        
+        🥝 in <strong className="text-stone-100">Sydney</strong> studying a  <strong className="text-stone-100">Master's of IT</strong> @ <strong className="text-stone-100">UNSW</strong>.
       </p>
       
     </>
@@ -86,7 +85,7 @@ export const heroData: Hero = {
   resumeDownload: [
     {
       cv: '/static/Thomas Duffett CV Software Engineer.pdf',
-      text: 'View resume',
+      text: 'View CV',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
@@ -116,58 +115,68 @@ export const aboutData: About = {
  */
 export const skill: Skill = {
   skillData: [
-  {
-    name: "React",
-    icon: RiReactjsLine,
-    colour: "text-cyan-400 "
-  },
+  
   {
     name: "Python",
     svg: "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
-    icon: FaPython
+    icon: FaPython,
+    href: "https://www.python.org/"
   },
-
+  {
+    name: "C++",
+    svg:"//upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/250px-ISO_C%2B%2B_Logo.svg.png",
+    icon: SiMongodb,
+    colour: "text-green-500",
+    href: "https://en.wikipedia.org/wiki/C%2B%2B"
+  },
   {
     name: "Javascript",
     svg:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png?20141107110902",
     icon: IoLogoJavascript,
-    colour: "text-[#F0DB4F] bg-black"
+    colour: "text-[#F0DB4F] bg-black",
+    href: "https://nodejs.org/en"
   },
   {
     name: "AWS",
     svg:"//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png",
-    icon: FaAws
+    icon: FaAws,
+    href: "https://aws.amazon.com/"
   },
   {
     name: "SQL",
     svg:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/810px-Postgresql_elephant.svg.png",
-    icon: SiPostgresql
+    icon: SiPostgresql,
+    href: "https://sqlite.org/index.html"
   },
   {
     name: "Linux",
-    icon: FcLinux
+    icon: FcLinux,
+    href: "https://ubuntu.com/download"
    
   },
   {
     name: "Docker",
     icon: FaDocker,
-    colour:"text-[#1D63ED]"
+    colour:"text-[#1D63ED]",
+    href: "https://www.docker.com/"
   },
   {
-    name: "MongoDB",
-    svg:"https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
-    icon: SiMongodb,
-    colour: "text-green-500"
+    name: "React",
+    icon: RiReactjsLine,
+    colour: "text-cyan-400 ",
+    href: "https://react.dev"
   },
   {
     name: "Git",
     svg:"https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
-    icon: FaGitAlt
+    icon: FaGitAlt,
+    href: "https://git-scm.com/"
   },
   {
     name: "TailwindCSS",
     svg:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042",
-    icon: RiTailwindCssFill
+    icon: RiTailwindCssFill,
+    href: "https://tailwindcss.com/"
   },
 ],
 };
@@ -177,23 +186,26 @@ export const skill: Skill = {
  */
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: 'Toms-structures',
+    description: 'A structural engineering library for Australian engineers. Development is ongoing',
+    url: 'https://github.com/Revelate123/structures',
+    image: porfolioImage3,
+  },
+  {
     title: 'Restaurant Recommender',
-    description: 'Give a short description of your project here.',
+    description: 'My first ever web app. I\'m no longer paying for gemini tokens so functionality is now limited :(',
     url: '/restaurant',
     image: porfolioImage1,
   },
   {
     title: 'Seek 2',
-    description: 'Give a short description of your project here.',
+    description: 'seek.com with a twist. Users input keywords, and the job boards are scanned to find how often those keywords appeared',
     url: 'http://localhost:2080',
     image: porfolioImage2,
   },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
+  
+  
+
 ];
 
 /**
@@ -203,7 +215,7 @@ export const education: TimelineItem[] = [
   {
     date: '2024 - current',
     location: 'University of New South Wales',
-    title: 'Master of Information Technology',
+    title: 'Master\'s of Information Technology',
 content: (
   <div>
     <span className="font-bold underline">WAM:</span>

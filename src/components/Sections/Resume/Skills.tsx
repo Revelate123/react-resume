@@ -6,7 +6,7 @@ const Skills: FC = memo(() => {
   const { skillData } = skill;
 
   return (
-    <Section className="bg-neutral-100" sectionId={SectionId.Skills}>
+    <div>
       <div className="py-8">
         {/* Section Header */}
         <div className="grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0 md:grid-cols-4">
@@ -18,12 +18,13 @@ const Skills: FC = memo(() => {
           </div>
         </div>
 
-        {/* Skills Grid */}
+      
         <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-4">
           {skillData.map((props) => (
-            <div
-              key={props.name} // important for React rendering consistency
-              className="rounded-2xl border-4 border-neutral-800 p-4"
+            <a
+              key={props.name}
+              href = {props.href} // important for React rendering consistency
+              className="rounded-2xl border-4 border-neutral-800 p-4 block transform transition duration-200 hover:scale-105"
             >
               <div className="flex justify-center">
                 {props.svg ? (
@@ -34,11 +35,11 @@ const Skills: FC = memo(() => {
               </div>
 
               <h2 className="text-2xl text-center">{props.name}</h2>
-            </div>
+            </a>
           ))}
         </div>
       </div>
-    </Section>
+    </div>
   );
 });
 
