@@ -1,7 +1,6 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
@@ -205,7 +204,12 @@ export const education: TimelineItem[] = [
     date: '2024 - current',
     location: 'University of New South Wales',
     title: 'Master of Information Technology',
-    content: <p>WAM: 89.000</p>,
+content: (
+  <div>
+    <span className="font-bold underline">WAM:</span>
+    <span> 89.000</span>
+  </div>
+),
   },
   {
     date: '2017 - 2021',
@@ -213,8 +217,8 @@ export const education: TimelineItem[] = [
     title: 'Bachelor of Engineering (Honours)',
     content: (
         <ul className="list-disc list-inside">
-        <li>Graduated with 1st class honours.</li>
-        <li>Specialized in structural engineering.</li>
+        <li>Graduated with <b>1<sup>st</sup></b> class honours.</li>
+        <li>Awarded summer research scholarship.</li>
       </ul>
     ),
   },
@@ -226,10 +230,10 @@ export const experience: TimelineItem[] = [
     location: 'Dennis Bunt Consulting Engineers',
     title: 'Structural Engineer',
     content: (
-      <p >
-        <p>Design alterations and remediations for heritage structures in/around Sydney.</p>
-        <p>Design advertising sign structures (think billboards)</p>
-      </p>
+      <ul className="list-disc list-inside">
+        <li>Design alterations and remediations for heritage structures in/around Sydney.</li>
+        <li>Design signs (think billboards)</li>
+      </ul>
     ),
   },
   {
@@ -237,11 +241,10 @@ export const experience: TimelineItem[] = [
     location: 'Northrop Consulting Engineers',
     title: 'Structural Engineer',
     content: (
-      <p>
-        Worked as part of a tight-knit team of structural engineers and draftspeople.
-        Designed and managed construction of residential housing, commercial buildings, farmsheds,
-        and public infrastructure works.
-      </p>
+      <ul className="list-disc list-inside">
+        <li>Designed and managed construction across residential, commercial, and public sectors.</li>
+        <li>Led structural design of a new Dan murphy's store in Sydney, supplying the community with much needed alcohol.</li>
+      </ul>
     ),
   },
   {
@@ -249,19 +252,20 @@ export const experience: TimelineItem[] = [
     location: 'Dreamcast',
     title: 'Graduate Structural Engineer',
     content: (
-      <p>
-        Designed affordable residential housing in New Zealand.
-      </p>
+      <ul className="list-disc list-inside">
+        <li>Designed affordable residential housing in New Zealand.</li>
+      </ul>
     ),
   },
   {
-    date: 'December 2020 - August 2021',
+    date: 'December 2020 - September 2021',
     location: 'University of Auckland',
     title: 'Research Assistant',
     content: (
-      <p>
-        Designed affordable residential housing in New Zealand.
-      </p>
+      <ul className="list-disc list-inside">
+        <li>Assisted research in determining the drift capacity of reinforced concrete shear walls in an earthquake.</li>
+        <li>Used <b>MATLAB</b> to analyse test data.</li>
+      </ul>
     ),
   },
 ];
@@ -274,7 +278,7 @@ export const testimonial: TestimonialSection = {
   testimonials: [
     {
       name: 'Data Structures & Algorithms Professor',
-      text: "Hi Thomas,\nI am afraid I don't have the authority to disclose any ranking information. Thanks for your understanding. However, personally speaking, if I were to recommend three students from COMP24 24T3 to be tutors, you would definitely be one of them.",
+      text: "Hi Thomas,\nI am afraid I don't have the authority to disclose any ranking information. Thanks for your understanding. However, personally speaking, if I were to recommend three students from COMP9024 24T3 to be tutors, you would definitely be one of them.",
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {

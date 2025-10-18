@@ -1,48 +1,45 @@
-//import React from 'react'
-import {FC, memo} from 'react';
-
-import {SectionId,skill} from '../../../data/data';
+import { FC, memo } from 'react';
+import { SectionId, skill } from '../../../data/data';
 import Section from '../../Layout/Section';
 
 const Skills: FC = memo(() => {
-  const {skillData} = skill;
+  const { skillData } = skill;
+
   return (
-    <div className="py-8">
-      <div className="grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0  md:grid-cols-4">
-      <div className="col-span-1 flex justify-center md:justify-start">
-        <div className="relative h-max">
-          <h2 className="text-xl font-bold uppercase text-neutral-800">Skills</h2>
-          <span className="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400" />
+    <Section className="bg-neutral-100" sectionId={SectionId.Skills}>
+      <div className="py-8">
+        {/* Section Header */}
+        <div className="grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0 md:grid-cols-4">
+          <div className="col-span-1 flex justify-center md:justify-start">
+            <div className="relative h-max">
+              <h2 className="text-xl font-bold uppercase text-neutral-800">Skills</h2>
+              <span className="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400" />
+            </div>
+          </div>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-4">
+          {skillData.map((props) => (
+            <div
+              key={props.name} // important for React rendering consistency
+              className="rounded-2xl border-4 border-neutral-800 p-4"
+            >
+              <div className="flex justify-center">
+                {props.svg ? (
+                  <img className="h-[4.5rem]" src={props.svg} alt={props.name} />
+                ) : (
+                  <props.icon className={`${props.colour} text-7xl text-center`} />
+                )}
+              </div>
+
+              <h2 className="text-2xl text-center">{props.name}</h2>
+            </div>
+          ))}
         </div>
       </div>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-4">
-
-      {skillData.map((props) => (
-  <div
-    key={props.name} // ✅ add a unique key (name is fine if it's unique)
-    className="rounded-2xl border-4 border-neutral-800 p-4"
-  >
-    <div className="flex justify-center">
-      {props.svg ? (
-        <img className="h-[4.5rem]" src={props.svg} alt={props.name} />
-      ) : (
-        <props.icon className={`${props.colour} text-7xl text-center`} />
-      )}
-    </div>
-
-    <h2 className="text-2xl text-center">{props.name}</h2>
-  </div>
-))}
-      
-        
-        
-        
-      </div>
-    
-
-    </div>
-    
+    </Section>
   );
 });
+
 export default Skills;
