@@ -14,7 +14,6 @@ import {RiReactjsLine,RiTailwindCssFill} from "react-icons/ri";
 import {SiMongodb,SiPostgresql} from "react-icons/si";
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -67,11 +66,11 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Thomas Duffett.`,
+  name: `Thomas Duffett`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm based in <strong className="text-stone-100">Sydney</strong> and currently studying a  <strong className="text-stone-100">Master's</strong> of <strong className="text-stone-100">Information Technology</strong> at The University of New South Wales, <strong className="text-stone-100">UNSW</strong>.
+        🥝 based in <strong className="text-stone-100">Sydney</strong> studying a  <strong className="text-stone-100">Master's of IT</strong> @ <strong className="text-stone-100">UNSW</strong>.
         
       </p>
       
@@ -103,12 +102,11 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I'm a structural engineer studying computer science. After working in construction, I realized I enjoyed programming more and decided to pursue it full-time. I’m currently earning a master’s in IT, building my skills in software development.`,
+  description: ``,
   aboutItems: [
     {label: 'Location', text: 'Sydney, NSW, Australia', Icon: MapIcon},
-    {label: 'Age', text: '26', Icon: CalendarIcon},
     {label: 'Nationality', text: 'New Zealander', Icon: FlagIcon},
-    {label: 'Interests', text: 'Rowing, Surf Rowing, Reading', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Rowing, Reading', Icon: SparklesIcon},
     {label: 'Study', text: 'University of New South Wales', Icon: AcademicCapIcon}
     ,
   ],
@@ -207,13 +205,18 @@ export const education: TimelineItem[] = [
     date: '2024 - current',
     location: 'University of New South Wales',
     title: 'Master of Information Technology',
-    content: <p>Specialising in Cyber Security.</p>,
+    content: <p>WAM: 89.000</p>,
   },
   {
     date: '2017 - 2021',
     location: 'University of Auckland',
     title: 'Bachelor of Engineering (Honours)',
-    content: <p>Graduated with a 1st class honours.</p>,
+    content: (
+        <ul className="list-disc list-inside">
+        <li>Graduated with 1st class honours.</li>
+        <li>Specialized in structural engineering.</li>
+      </ul>
+    ),
   },
 ];
 
@@ -223,8 +226,9 @@ export const experience: TimelineItem[] = [
     location: 'Dennis Bunt Consulting Engineers',
     title: 'Structural Engineer',
     content: (
-      <p>
-        Current place of employement, while I complete my studies.
+      <p >
+        <p>Design alterations and remediations for heritage structures in/around Sydney.</p>
+        <p>Design advertising sign structures (think billboards)</p>
       </p>
     ),
   },
@@ -234,7 +238,9 @@ export const experience: TimelineItem[] = [
     title: 'Structural Engineer',
     content: (
       <p>
-        My first job in Australia. Located in Coffs Harbour, NSW.
+        Worked as part of a tight-knit team of structural engineers and draftspeople.
+        Designed and managed construction of residential housing, commercial buildings, farmsheds,
+        and public infrastructure works.
       </p>
     ),
   },
@@ -244,7 +250,17 @@ export const experience: TimelineItem[] = [
     title: 'Graduate Structural Engineer',
     content: (
       <p>
-        My introduction to the world of structural engineering
+        Designed affordable residential housing in New Zealand.
+      </p>
+    ),
+  },
+  {
+    date: 'December 2020 - August 2021',
+    location: 'University of Auckland',
+    title: 'Research Assistant',
+    content: (
+      <p>
+        Designed affordable residential housing in New Zealand.
       </p>
     ),
   },
@@ -288,9 +304,9 @@ export const contact: ContactSection = {
       href: 'https://www.google.com/maps/place/Sydney',
     },
     {
-      type: ContactType.Instagram,
-      text: '@t.duff123',
-      href: 'https://www.instagram.com/t.duff123/',
+      type: ContactType.LinkedIn,
+      text: 'Thomas Duffett',
+      href: 'https://www.linkedin.com/in/thomasduffett/',
     },
     {
       type: ContactType.Github,
@@ -305,6 +321,5 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Revelate123'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/thomasduffett/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/t.duff123/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/thomasduffett/'}
 ];

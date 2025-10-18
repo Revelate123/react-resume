@@ -4,6 +4,7 @@ import {education, experience, SectionId} from '../../../data/data';
 import Section from '../../Layout/Section';
 import ResumeSection from './ResumeSection';
 import TimelineItem from './TimelineItem';
+import Skills from './Skills'
 
 const Resume: FC = memo(() => {
   //const { skillData } = skill;
@@ -22,7 +23,7 @@ const Resume: FC = memo(() => {
             <TimelineItem item={item} key={`${item.title}-${index}`} />
           ))}
         </ResumeSection>
-        
+        <Skills/>
       </div>
     </Section>
   );
