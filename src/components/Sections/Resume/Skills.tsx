@@ -1,6 +1,6 @@
 import { FC, memo } from 'react';
-import { SectionId, skill } from '../../../data/data';
-import Section from '../../Layout/Section';
+import { skill } from '../../../data/data';
+
 
 const Skills: FC = memo(() => {
   const { skillData } = skill;

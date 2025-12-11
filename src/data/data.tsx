@@ -17,7 +17,8 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
+import porfolioImage3 from '../images/portfolio/Toms-Structures-dark-mode.png';
+import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -187,7 +188,7 @@ export const skill: Skill = {
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Toms-structures',
-    description: 'A structural engineering library for Australian engineers. Development is ongoing',
+    description: 'A Python library for Australian structural engineers designing masonry structures',
     url: 'https://github.com/Revelate123/structures',
     image: porfolioImage3,
   },
@@ -202,6 +203,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'seek.com with a twist. Users input keywords, and the job boards are scanned to find how often those keywords appeared',
     url: 'http://localhost:2080',
     image: porfolioImage2,
+  },
+  {
+    title: 'Pico Terminal',
+    description: 'A small terminal emulator on the raspberry pi pico using an epaper display',
+    url: 'http://localhost:2080',
+    image: porfolioImage4,
   },
   
   
@@ -294,8 +301,8 @@ export const testimonial: TestimonialSection = {
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
+      name: 'Placeholder',
+      text: 'Placeholder',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
   ],
