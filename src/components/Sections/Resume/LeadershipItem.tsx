@@ -2,7 +2,7 @@ import {FC, memo} from 'react';
 
 import {LeadershipItem} from '../../../data/dataDef';
 
-const LeadershipItem: FC<{item: LeadershipItem}> = memo(({item}) => {
+const LeadershipTemplate: FC<{item: LeadershipItem}> = memo(({item}) => {
   const {title, date, location, content} = item;
   return (
     <div className="flex flex-col pb-8 text-center last:pb-0 md:text-left">
@@ -19,5 +19,5 @@ const LeadershipItem: FC<{item: LeadershipItem}> = memo(({item}) => {
   );
 });
 
-LeadershipItem.displayName = 'LeadershipItem';
-export default LeadershipItem;
+LeadershipTemplate.displayName = 'LeadershipTemplate';
+export default LeadershipTemplate;
