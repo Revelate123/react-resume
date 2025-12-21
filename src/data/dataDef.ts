@@ -27,10 +27,7 @@ export interface Hero {
   description: JSX.Element;
   actions: HeroActionItem[];
   resumeDownload: HeroActionItem2[];
- 
 }
-
-
 
 interface HeroActionItem2 {
   cv: string;
@@ -38,7 +35,6 @@ interface HeroActionItem2 {
   primary?: boolean;
   Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
-
 
 interface HeroActionItem {
   href: string;
@@ -79,7 +75,6 @@ export interface Skill {
   skillData: SkillGroup[];
 }
 
-
 interface SkillGroup {
   name: string;
   svg?: string;
@@ -102,6 +97,15 @@ export interface PortfolioItem {
  * Resume section
  */
 export interface TimelineItem {
+  date: string;
+  location: string;
+  title: string;
+  content: JSX.Element;
+}
+/**
+ * Resume section
+ */
+export interface LeadershipItem {
   date: string;
   location: string;
   title: string;

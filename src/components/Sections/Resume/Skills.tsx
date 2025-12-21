@@ -1,9 +1,9 @@
-import { FC, memo } from 'react';
-import { skill } from '../../../data/data';
+import {FC, memo} from 'react';
 
+import {skill} from '../../../data/data';
 
 const Skills: FC = memo(() => {
-  const { skillData } = skill;
+  const {skillData} = skill;
 
   return (
     <div>
@@ -18,17 +18,15 @@ const Skills: FC = memo(() => {
           </div>
         </div>
 
-      
         <div className="grid grid-cols-2 md:grid-cols-5 items-center justify-center gap-4">
-          {skillData.map((props) => (
+          {skillData.map(props => (
             <a
-              key={props.name}
-              href = {props.href} // important for React rendering consistency
               className="rounded-2xl border-4 border-neutral-800 p-4 block transform transition duration-200 hover:scale-105"
-            >
+              href={props.href} // important for React rendering consistency
+              key={props.name}>
               <div className="flex justify-center">
                 {props.svg ? (
-                  <img className="h-[4.5rem]" src={props.svg} alt={props.name} />
+                  <img alt={props.name} className="h-[4.5rem]" src={props.svg} />
                 ) : (
                   <props.icon className={`${props.colour} text-7xl text-center`} />
                 )}
