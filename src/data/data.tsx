@@ -169,7 +169,7 @@ export const skill: Skill = {
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Toms-structures',
+    title: 'Toms-structures - 2025',
     description: 'A Python library for Australian structural engineers designing masonry structures',
     url: 'https://github.com/Revelate123/structures',
     image: porfolioImage3,
@@ -189,9 +189,9 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage2,
   },
   {
-    title: 'Pico Terminal',
-    description: 'A small terminal emulator on the raspberry pi pico using an epaper display',
-    url: 'http://localhost:2080',
+    title: 'PicoOS - 2025',
+    description: 'A miniature operating system on the raspberry pi pico',
+    url: 'https://github.com/Revelate123/PicoOS',
     image: porfolioImage4,
   },
 ];
