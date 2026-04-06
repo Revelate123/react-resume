@@ -11,7 +11,7 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+//import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage3 from '../images/portfolio/Toms-Structures-dark-mode.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
@@ -115,7 +115,7 @@ export const skill: Skill = {
     },
     {
       name: 'Javascript',
-      svg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png?20141107110902',
+      svg: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
       icon: IoLogoJavascript,
       colour: 'text-[#F0DB4F] bg-black',
       href: 'https://nodejs.org/en',
@@ -128,7 +128,7 @@ export const skill: Skill = {
     },
     {
       name: 'SQL',
-      svg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/810px-Postgresql_elephant.svg.png',
+      svg: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Logo_PostgreSQL.png',
       icon: SiPostgresql,
       href: 'https://sqlite.org/index.html',
     },
@@ -157,7 +157,7 @@ export const skill: Skill = {
     },
     {
       name: 'TailwindCSS',
-      svg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042',
+      svg: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
       icon: RiTailwindCssFill,
       href: 'https://tailwindcss.com/',
     },
@@ -188,12 +188,12 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://github.com/Revelate123/Seek2',
     image: porfolioImage2,
   },
-  {
+  /*{
     title: 'PicoOS - 2025',
     description: 'A miniature operating system on the raspberry pi pico',
     url: 'https://github.com/Revelate123/PicoOS',
     image: porfolioImage4,
-  },
+  },*/
 ];
 
 /**
