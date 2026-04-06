@@ -85,3 +85,6 @@ Deploying your new site to Vercel is simple, and can be done by following their 
 ## To build docker image
 
 sudo docker build -t react-resume .
+
+sudo docker save react-resume | ssh -i"~/.ssh/cv.pem" ec2-user@ec2-52-63-237-163.ap-southeast-2.compute.amazonaws.com sudo docker load
+
