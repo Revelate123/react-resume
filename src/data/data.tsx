@@ -9,13 +9,13 @@ import {SiMongodb, SiPostgresql} from 'react-icons/si';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/background.jpg';
+import discordVerifierImage from '../images/portfolio/DiscordVerifier.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 //import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage3 from '../images/portfolio/Toms-Structures-dark-mode.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
-import discordVerifierImage from '../images/portfolio/DiscordVerifier.png';
 import {
   About,
   ContactSection,
@@ -201,8 +201,8 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       'Currently building a verification bot in a team of 3 to be used by QuantSoc. The tool allows discord users to automatically verify using their university email accounts',
     url: 'https://github.com/QuantSoc/verification-tool',
-    image: discordVerifierImage
-  }
+    image: discordVerifierImage,
+  },
 ];
 
 /**
@@ -217,9 +217,7 @@ export const education: TimelineItem[] = [
       <div>
         <ul className="list-disc list-inside">
           <li>Maintaining a High Distinction WAM.</li>
-          <li>
-            Notable Courses: Algorithm Design (97%), Advanced C++ (96%), Microprocessors & Interfacing (96%).
-          </li>
+          <li>Notable Courses: Algorithm Design (97%), Advanced C++ (96%), Microprocessors & Interfacing (96%).</li>
         </ul>
       </div>
     ),
@@ -245,7 +243,10 @@ export const experience: TimelineItem[] = [
       <ul className="list-disc list-inside">
         <li>Tutored a group of 20+ students, with a focus on fostering a supportive learning environment.</li>
         <li>Facilitated interactive lessons on proof writing, set theory, number theory and graph concepts.</li>
-        <li>Instructed students in software fundamentals, covering C programming alongside sorting and graph/tree traversal algorithms.</li>
+        <li>
+          Instructed students in software fundamentals, covering C programming alongside sorting and graph/tree
+          traversal algorithms.
+        </li>
       </ul>
     ),
   },
@@ -303,7 +304,10 @@ export const Leadership: LeadershipItem[] = [
     title: 'Coffs Harbour Toastmasters',
     content: (
       <ul className="list-disc list-inside">
-        <li>Governed club operations and chaired executive committee meetings, managing task delegation across team members while mentoring individuals to develop public speaking and leadership capabilities.</li>
+        <li>
+          Governed club operations and chaired executive committee meetings, managing task delegation across team
+          members while mentoring individuals to develop public speaking and leadership capabilities.
+        </li>
       </ul>
     ),
   },
@@ -314,7 +318,8 @@ export const Leadership: LeadershipItem[] = [
     content: (
       <ul className="list-disc list-inside">
         <li>
-          Managed a 30-athlete squad, optimising training regimens, coordinating logistics, and driving team execution to secure multiple national varsity championship titles.
+          Managed a 30-athlete squad, optimising training regimens, coordinating logistics, and driving team execution
+          to secure multiple national varsity championship titles.
         </li>
       </ul>
     ),
