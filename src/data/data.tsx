@@ -15,6 +15,7 @@ import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/Toms-Structures-dark-mode.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import discordVerifierImage from '../images/portfolio/DiscordVerifier.png';
 import {
   About,
   ContactSection,
@@ -73,7 +74,7 @@ export const heroData: Hero = {
   ],
   resumeDownload: [
     {
-      cv: '/static/Thomas Duffett CV Software Engineer.pdf',
+      cv: '/static/Thomas Duffett CV.pdf',
       text: 'View CV',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -90,7 +91,7 @@ export const aboutData: About = {
   aboutItems: [
     {label: 'Location', text: 'Sydney, NSW, Australia', Icon: MapIcon},
     {label: 'Nationality', text: 'New Zealand / Ireland', Icon: FlagIcon},
-    {label: 'Interests', text: 'Rowing, Reading', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Rowing, Reading, Competitive Programming', Icon: SparklesIcon},
     {label: 'Study', text: 'University of New South Wales', Icon: AcademicCapIcon},
   ],
 };
@@ -122,7 +123,8 @@ export const skill: Skill = {
     },
     {
       name: 'AWS',
-      svg: '//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png',
+      //svg: '//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png',
+      svg: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Amazon_Web_Services_2025.svg',
       icon: FaAws,
       href: 'https://aws.amazon.com/',
     },
@@ -194,6 +196,13 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://github.com/Revelate123/PicoOS',
     image: porfolioImage4,
   },*/
+  {
+    title: 'QuantSoc Discord Verification Bot - 2026',
+    description:
+      'Currently building a verification bot in a team of 3 to be used by QuantSoc. The tool allows discord users to automatically verify using their university email accounts',
+    url: 'https://github.com/QuantSoc/verification-tool',
+    image: discordVerifierImage
+  }
 ];
 
 /**
@@ -202,14 +211,14 @@ export const portfolioItems: PortfolioItem[] = [
 export const education: TimelineItem[] = [
   {
     date: 'Aug. 2024 - present',
-    location: "Master's of Information Technology | WAM 89.875",
+    location: "Master's of Information Technology | WAM 89.8",
     title: 'University of New South Wales',
     content: (
       <div>
         <ul className="list-disc list-inside">
-          <li>Maintaining a High Distinction WAM</li>
+          <li>Maintaining a High Distinction WAM.</li>
           <li>
-            Notable Courses: Data structures & Algorithms (98%), Advanced C++ (96%), Microprocessors & Interfacing (96%)
+            Notable Courses: Algorithm Design (97%), Advanced C++ (96%), Microprocessors & Interfacing (96%).
           </li>
         </ul>
       </div>
@@ -228,6 +237,18 @@ export const education: TimelineItem[] = [
 ];
 
 export const experience: TimelineItem[] = [
+  {
+    date: 'Feb. 2026 - Present',
+    location: 'University of New South Wales',
+    title: 'Casual Academic Tutor',
+    content: (
+      <ul className="list-disc list-inside">
+        <li>Tutored a group of 20+ students, with a focus on fostering a supportive learning environment.</li>
+        <li>Facilitated interactive lessons on proof writing, set theory, number theory and graph concepts.</li>
+        <li>Instructed students in software fundamentals, covering C programming alongside sorting and graph/tree traversal algorithms.</li>
+      </ul>
+    ),
+  },
   {
     date: 'Nov. 2021 - Present',
     location: 'DBCE, Northrop, Dreamcast',
@@ -249,7 +270,6 @@ export const experience: TimelineItem[] = [
         <li>
           Assisted research in determining the drift capacity of reinforced concrete shear walls in an earthquake.
         </li>
-        <li>Used MATLAB to analyse test data.</li>
       </ul>
     ),
   },
@@ -283,8 +303,7 @@ export const Leadership: LeadershipItem[] = [
     title: 'Coffs Harbour Toastmasters',
     content: (
       <ul className="list-disc list-inside">
-        <li>Led and managed the club, held regular committee meetings, delegated tasks amongst committee members.</li>
-        <li>Mentored members to improve their public speaking and leadership skills.</li>
+        <li>Governed club operations and chaired executive committee meetings, managing task delegation across team members while mentoring individuals to develop public speaking and leadership capabilities.</li>
       </ul>
     ),
   },
@@ -295,8 +314,7 @@ export const Leadership: LeadershipItem[] = [
     content: (
       <ul className="list-disc list-inside">
         <li>
-          Led a team of 30 men, directed training sessions, coordinated team activities, and motivated the squad to
-          achieve competitive success culminating in multiple national varsity titles.
+          Managed a 30-athlete squad, optimising training regimens, coordinating logistics, and driving team execution to secure multiple national varsity championship titles.
         </li>
       </ul>
     ),
